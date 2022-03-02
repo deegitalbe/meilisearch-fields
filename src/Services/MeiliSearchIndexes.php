@@ -1,9 +1,10 @@
 <?php
 namespace Deegitalbe\MeiliSearchIndexes\Services;
 
+use Deegitalbe\MeiliSearchIndexes\Contracts\MeiliSearchIndexesContract;
 use Illuminate\Support\Collection;
 /** Meilisearch indexes. */
-class MeiliSearchIndexes
+class MeiliSearchIndexes implements MeiliSearchIndexesContract
 {
     /**
      * Available indexes keyed by their respective app_key.

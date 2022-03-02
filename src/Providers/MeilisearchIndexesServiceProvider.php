@@ -1,9 +1,9 @@
 <?php
 namespace Deegitalbe\MeiliSearchIndexes\Providers;
 
+use Deegitalbe\MeiliSearchIndexes\Contracts\MeiliSearchIndexesContract;
 use Deegitalbe\MeiliSearchIndexes\Package;
 use Deegitalbe\MeiliSearchIndexes\Services\MeiliSearchIndexes;
-use Deegitalbe\MeiliSearchIndexes\Services\MeiliSearchIndexesContract;
 use Henrotaym\LaravelPackageVersioning\Providers\Abstracts\VersionablePackageServiceProvider;
 
 class MeilisearchIndexesServiceProvider extends VersionablePackageServiceProvider

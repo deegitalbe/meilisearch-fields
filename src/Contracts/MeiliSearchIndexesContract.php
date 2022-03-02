@@ -1,7 +1,6 @@
 <?php
-namespace Deegitalbe\MeiliSearchIndexes\Services;
+namespace Deegitalbe\MeiliSearchIndexes\Contracts;
 
-use Illuminate\Support\Collection;
 /** Meilisearch indexes. */
 interface MeiliSearchIndexesContract
 {
