@@ -12,8 +12,7 @@ class MeiliSearchIndexes implements MeiliSearchIndexesContract
      * @return array
      */
     protected $indexes_by_app = [
-        "contact" => ["contacts"], 
-        "invoicing" => ["invoices"]
+        "contact" => ["contacts"]
     ];
 
     /**
