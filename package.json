@@ -1,6 +1,6 @@
 {
     "name": "meilisearch-indexes",
-    "version": "1.0.3",
+    "version": "1.0.4",
     "main": "index.js",
     "repository": "git@github.com:deegitalbe/meilisearch-indexes.git",
     "author": "Mathieu Henrotay <mathieu.henrotay@gmail.com>",
