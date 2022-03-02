@@ -1,6 +1,7 @@
 <?php
 namespace Deegitalbe\MeiliSearchIndexes\Tests\Unit\Services;
 
+use Deegitalbe\MeiliSearchIndexes\Contracts\MeiliSearchIndexesContract;
 use Mockery\MockInterface;
 use Illuminate\Support\Collection;
 use Deegitalbe\MeiliSearchIndexes\Tests\TestCase;
@@ -73,7 +74,7 @@ class MeiliSearchIndexesTest extends TestCase
         $this->service_mock->expects()->getAuthorizationKey()->andReturn($this->authorization_key);
         $this->service_mock->expects()->prefixIndex($this->index)->passthru();
 
-        $this->assertEquals("{$this->authorization_key}_{$this->app_key}_{$this->index}", $this->service_mock->prefixIndex($this->index));
+        $this->assertEquals([$this->index => "{$this->authorization_key}_{$this->app_key}_{$this->index}"], $this->service_mock->prefixIndex($this->index));
     }
 
     /** @test */
@@ -83,7 +84,7 @@ class MeiliSearchIndexesTest extends TestCase
         $app_indexes = $this->getIndexes()[$this->app_key];
 
         $this->service_mock->expects()->setAppKey($this->app_key)->andReturnSelf();
-        $this->service_mock->expects()->prefixIndex()->withArgs(function(string $index) use ($app_indexes) { return in_array($index, $app_indexes); })->andReturn(true);
+        $this->service_mock->expects()->prefixIndex()->withArgs(function(string $index) use ($app_indexes) { return in_array($index, $app_indexes); })->andReturn([true]);
         $this->service_mock->expects()->prefixIndexes($app_indexes, $this->app_key)->passthru();
 
         $this->assertEquals([true] , $this->service_mock->prefixIndexes($app_indexes, $this->app_key));

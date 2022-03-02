@@ -85,18 +85,18 @@ class MeiliSearchIndexes implements MeiliSearchIndexesContract
     {
         $this->setAppKey($app);
 
-        return collect($indexes)->map([$this, 'prefixIndex'])->all();
+        return collect($indexes)->mapWithKeys([$this, 'prefixIndex'])->all();
     }
 
     /**
      * Prefixing given index.
      * 
      * @param string $index Index to prefix.
-     * @return string
+     * @return string[]
      */
-    public function prefixIndex(string $index): string
+    public function prefixIndex(string $index): array
     {
-        return join("_", [$this->getAuthorizationKey(), $this->getAppKey(), $index]);
+        return [$index => join("_", [$this->getAuthorizationKey(), $this->getAppKey(), $index])];
     }
 
     /**
