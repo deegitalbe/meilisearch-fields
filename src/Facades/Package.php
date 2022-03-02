@@ -1,7 +1,7 @@
 <?php
-namespace Henrotaym\VersioningPackageTemplate\Facades;
+namespace Deegitalbe\MeiliSearchIndexes\Facades;
 
-use Henrotaym\VersioningPackageTemplate\Package as Underlying;
+use Deegitalbe\MeiliSearchIndexes\Package as Underlying;
 use Henrotaym\LaravelPackageVersioning\Facades\Abstracts\VersionablePackageFacade;
 
 class Package extends VersionablePackageFacade

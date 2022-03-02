@@ -1,9 +1,9 @@
 <?php
-namespace Henrotaym\VersioningPackageTemplate\Tests;
+namespace Deegitalbe\MeiliSearchIndexes\Tests;
 
-use Henrotaym\VersioningPackageTemplate\Package;
+use Deegitalbe\MeiliSearchIndexes\Package;
 use Henrotaym\LaravelPackageVersioning\Testing\VersionablePackageTestCase;
-use Henrotaym\VersioningPackageTemplate\Providers\VersioningPackageTemplateServiceProvider;
+use Deegitalbe\MeiliSearchIndexes\Providers\MeilisearchIndexesServiceProvider;
 
 class TestCase extends VersionablePackageTestCase
 {
@@ -15,7 +15,7 @@ class TestCase extends VersionablePackageTestCase
     public function getServiceProviders(): array
     {
         return [
-            VersioningPackageTemplateServiceProvider::class
+            MeilisearchIndexesServiceProvider::class
         ];
     }
 }

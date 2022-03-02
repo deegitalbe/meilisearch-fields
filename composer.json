@@ -1,6 +1,6 @@
 {
-    "name": "henrotaym/versioning-package-template",
-    "description": "Basic versioned php package.",
+    "name": "deegitalbe/meilisearch-indexes",
+    "description": "Meilisearch available indexes.",
     "type": "library",
     "license": "MIT",
     "authors": [
@@ -18,18 +18,18 @@
     },
     "autoload": {
         "psr-4": {
-            "Henrotaym\\VersioningPackageTemplate\\": "src"
+            "Deegitalbe\\MeiliSearchIndexes\\": "src"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Henrotaym\\VersioningPackageTemplate\\Tests\\": "tests"
+            "Deegitalbe\\MeiliSearchIndexes\\Tests\\": "tests"
         }
     },
     "extra": {
         "laravel": {
             "providers": [
-                "Henrotaym\\VersioningPackageTemplate\\Providers\\VersioningPackageTemplateServiceProvider"
+                "Deegitalbe\\MeiliSearchIndexes\\Providers\\MeilisearchIndexesServiceProvider"
             ]
         }
     }
