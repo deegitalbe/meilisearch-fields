@@ -95,7 +95,7 @@ class MeiliSearchIndexes implements MeiliSearchIndexesContract
      */
     public function prefixIndex(string $index): array
     {
-        return [$index => join("_", [$this->getAuthorizationKey(), $this->getAppKey(), $index])];
+        return [$index => join("_", [$this->getAppKey(), $index])];
     }
 
     /**
